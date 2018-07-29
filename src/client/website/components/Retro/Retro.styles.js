@@ -8,6 +8,12 @@ const styles = theme => ({
     alignContent: 'flex-start',
     width: '100%'
   },
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    margin: '15px 0',
+    padding: '0 4%'
+  },
   columns: {
     display: 'flex',
     width: '100%',

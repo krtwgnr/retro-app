@@ -93,7 +93,12 @@ class Card extends Component {
     const { isEditing, text } = this.state;
     const { socket } = this.context;
     return (
-      <MaterialCard className={classes.card}>
+      <MaterialCard
+        className={classes.card}
+        draggable="true"
+        onDragStart={() => this.props.onCardDragStart(card)}
+        onDrop={() => this.props.onCardDrop(card)}
+      >
         <CardContent key="content">
           {isEditing ? (
             <TextField
@@ -176,6 +181,8 @@ Card.propTypes = {
   editCard: PropTypes.func.isRequired,
   removeCard: PropTypes.func.isRequired,
   addMessage: PropTypes.func.isRequired,
+  onCardDragStart: PropTypes.func.isRequired,
+  onCardDrop: PropTypes.func.isRequired,
   // Queries
   removeCardQuery: PropTypes.shape(QueryShape).isRequired,
   editCardQuery: PropTypes.shape(QueryShape).isRequired,

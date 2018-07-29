@@ -10,7 +10,14 @@
     "confirm-delete-card": "Czy na pewno chcesz usunąć?",
     "remaining-votes": "Pozostało głosów",
     "previous-step": "Wróć do poprzedniego etapu spotkania",
-    "next-step": "Przejdź do kolejnego etapu spotkania"
+    "sort-votes-column": "Sortuj karty od największej liczby głosów",
+    "next-step": "Przejdź do kolejnego etapu spotkania",
+    "join-cards": "Czy na pewno chcesz połączysz kartki?",
+    "join-cards-ok": "Tak, chcę",
+    "join-cards-no": "Nie",
+    "toggle-cards-visible": "Pokaż / ukryj karty",
+    "label-query-search": "Szukaj kartek",
+    "download-action-points": "Pobierz kartki"
   },
   "retro-steps": {
     "write": "Zgłoś swoje spostrzeżenia",
