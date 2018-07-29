@@ -10,7 +10,14 @@
     "confirm-delete-card": "Are you sure you want to delete?",
     "remaining-votes": "Remaining votes",
     "previous-step": "Go back to the previous step",
-    "next-step": "Proceed to the next step of the meeting"
+    "sort-votes-column": "Sort by votes number, decreasing",
+    "next-step": "Proceed to the next step of the meeting",
+    "join-cards": "You are sure you want to join cards?",
+    "join-cards-ok": "Yes, I want",
+    "join-cards-no": "No",
+    "toggle-cards-visible": "Toggle cards visibility",
+    "label-query-search": "Cards search",
+    "download-action-points": "Download cards"
   },
   "retro-steps": {
     "write": "Write your thoughts",

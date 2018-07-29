@@ -5,7 +5,9 @@ import styles from './../../components/Retro/Retro.styles';
 import Retro from '../../components/Retro';
 import { retroJoin, setRetroIdQueryParameter } from '../../actions/retro';
 import { columnAdd, columnRemove } from '../../actions/column';
+import { cardEdit, cardRemove } from '../../actions/card';
 import {
+  CARD_EDIT_QUERY_KEY,
   COLUMN_ADD_QUERY_KEY,
   COLUMN_REMOVE_QUERY_KEY,
   RETRO_CARDS_KEY,
@@ -33,7 +35,8 @@ const mapStateToProps = ({ retro, user }) => ({
   joinRetroQuery: retro[RETRO_JOIN_QUERY_KEY],
   renameRetroQuery: retro[RETRO_RENAME_QUERY_KEY],
   addColumnQuery: retro[COLUMN_ADD_QUERY_KEY],
-  removeColumnQuery: retro[COLUMN_REMOVE_QUERY_KEY]
+  removeColumnQuery: retro[COLUMN_REMOVE_QUERY_KEY],
+  editCardQuery: retro[CARD_EDIT_QUERY_KEY]
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -41,7 +44,9 @@ const mapDispatchToProps = dispatch => ({
   addColumn: (socket, name, icon) => dispatch(columnAdd(socket, name, icon)),
   removeColumn: (socket, id) => dispatch(columnRemove(socket, id)),
   setRetroId: retroId => dispatch(setRetroIdQueryParameter(retroId)),
-  addMessage: message => dispatch(addMessage(message))
+  addMessage: message => dispatch(addMessage(message)),
+  editCard: (socket, card) => dispatch(cardEdit(socket, card)),
+  removeCard: (socket, card) => dispatch(cardRemove(socket, card))
 });
 
 export default withRouter(withStyles(styles, { withTheme: true })(
